@@ -24,7 +24,7 @@ router.get('/register', isNotAuth, (req ,res ,next)=>{
   res.render('register');
 });
 
-router.get('/usuarios', isNotAuth, (req, res next) => {
+router.get('/usuarios', isNotAuth, (req, res, next) => {
   mongoose.model('Usuario').find().then((usuarios) => {
     res.render('usuarios', {
       usuarios: usuarios
